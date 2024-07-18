@@ -13,3 +13,9 @@ jobs:
         uses: hoverkraft-tech/compose-action@v2.0.1
         with:
           compose-file: "./docker/docker-compose.yml"
+
+      - name: Install dependencies
+        run: npm ci
+        
+      - name: Run migrations
+        run: npm run typeorm migration:run
