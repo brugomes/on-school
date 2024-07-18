@@ -15,7 +15,7 @@ jobs:
           compose-file: "./docker/docker-compose.yml"
 
       - name: Install dependencies
-        run: npm ci
+        run: npm install
         
       - name: Run migrations
         run: npm run typeorm migration:run
