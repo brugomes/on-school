@@ -7,7 +7,7 @@
     "start": "node build/server.js",
     "build": "tsup src --out-dir build",
     "test": "jest --coverage",
-    "typeorm": "ts-node -r tsconfig-paths/register ./node_modules/typeorm/cli.js"
+    "typeorm": "ts-node -r tsconfig-paths/register ./node_modules/typeorm/cli.js -d src/lib/typeorm/typeorm.ts"
   },
   "keywords": [],
   "author": "",
