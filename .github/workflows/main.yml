@@ -2,6 +2,11 @@ name: Docker Compose Action
 
 on: [push]
 
+env:
+  POSTGRES_USER: postgres
+  POSTGRES_PASSWORD: postgres
+  POSTGRES_DB: on_school
+
 jobs:
   build:
     runs-on: ubuntu-latest
