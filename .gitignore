@@ -1,6 +1,7 @@
 # Dependency directories
 node_modules/
 coverage/
+.DS_Store
 
 # dotenv environment variable files
 .env
