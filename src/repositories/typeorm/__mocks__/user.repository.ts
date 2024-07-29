@@ -3,9 +3,7 @@ import { UUID } from 'crypto'
 import { hash } from 'bcryptjs'
 
 export class UserRepository {
-
-  constructor() {
-  }
+  constructor() {}
 
   async create(
     name: string,
@@ -13,43 +11,59 @@ export class UserRepository {
     password: string,
     isadmin: boolean,
   ): Promise<IUser | undefined> {
-    const hashedPassword = await hash("123", 8)
+    const hashedPassword = await hash('123', 8)
     return {
-      name: "Usuario",
-      email: "teste@email.com",
+      name,
+      email,
       password: hashedPassword,
-      isadmin: true,
+      isadmin,
       posts: [],
-      createdAt: new Date()
+      createdAt: new Date(),
     }
   }
 
   async findById(id: UUID): Promise<IUser | null> {
-    const hashedPassword = await hash("123", 8)
+    const hashedPassword = await hash('123', 8)
     return {
-      name: "Usuario",
-      email: "teste@email.com",
+      name: 'Usuario',
+      email: 'teste@email.com',
       password: hashedPassword,
       isadmin: true,
       posts: [],
-      createdAt: new Date()
+      createdAt: new Date(),
     }
   }
 
   async findByEmail(email: string): Promise<IUser | undefined> {
-    const hashedPassword = await hash("123", 8)
+    const hashedPassword = await hash('123', 8)
     const users = [
       {
-        name: "Usuario",
-        email: "teste@email.com",
+        name: 'Usuario',
+        email: 'teste@email.com',
         password: hashedPassword,
         isadmin: false,
         posts: [],
-        createdAt: new Date()
-      }
-    ];
-    return users.find((user)=>{
-      return user.email === email;
+        createdAt: new Date(),
+      },
+      {
+        name: 'professor',
+        email: 'professor@teste.com',
+        password: hashedPassword,
+        isadmin: true,
+        posts: [],
+        createdAt: new Date(),
+      },
+      {
+        name: 'professor',
+        email: 'aluno@teste.com',
+        password: hashedPassword,
+        isadmin: false,
+        posts: [],
+        createdAt: new Date(),
+      },
+    ]
+    return users.find((user) => {
+      return user.email === email
     })
   }
 }
