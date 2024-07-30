@@ -23,7 +23,7 @@ Para rodar o projeto localmente, você precisará ter instalado em sua máquina:
 git clone https://github.com/brugomes/on-school.git
 ```
 
-2. Para iniciar o banco de dados PostgreSQL usando Docker Compose, vá no diretório ```/docker``` e execute o comando
+2. Para iniciar o banco de dados PostgreSQL usando Docker Compose, vá no diretório ```/docker``` e execute o comando:
 ```
 docker-compose up -d
 ```
@@ -44,6 +44,7 @@ npm run start:dev
 ```
 
 ## Testes
+Para rodar todos os teste, execute:
 ```
 npm run test
 ```
