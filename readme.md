@@ -17,7 +17,7 @@ Para rodar o projeto localmente, você precisará ter instalado em sua máquina:
 - Node.js (versão 14 ou superior)
 - Npm
 
-## Como executar o projeto
+## Como instalar e executar o projeto
 1. Clone o repositório:
 ```sh
 git clone https://github.com/brugomes/on-school.git
